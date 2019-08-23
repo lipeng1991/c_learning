@@ -8,6 +8,7 @@
 #define SERVER_ADDR "127.0.0.1"
 #define SERVER_PORT 12345
 
+//发送数据
 void send_data(int sockfd){
     char *query;
     //初始化一个长度为MESSAGE_SIZE长度的字符串流
@@ -40,7 +41,7 @@ void send_data(int sockfd){
 
 
 }
-
+//连接服务器
 int client_tcp_demo()
 {
     int sockfd;
@@ -93,6 +94,8 @@ size_t readn(int fd, void *buffer, size_t size) {
     return (size - length);        /* 返回的是实际读取的字节数 */
 }
 
+
+//读取数据
 void read_data(int sockfd)
 {
     ssize_t  n;
@@ -112,7 +115,7 @@ void read_data(int sockfd)
     }
 }
 
-
+//开启服务器监听
 void tcp_server_demo(){
     /*
     创建socket套接字，bind到对应地址和端口，并开始调用listen接口基监听

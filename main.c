@@ -7,7 +7,9 @@
 
 int main() {
     printf("Hello, World!\n");
+    int a;
     tcp_server_demo();
-    client_tcp_demo();
+//    client_tcp_demo();
+    a = udp_server();
     return 0;
 }
